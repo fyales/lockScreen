@@ -7,12 +7,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.*;
 import android.os.Process;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
     private DevicePolicyManager devicePolicyManager;
     private ComponentName componentName;
     private final static int LOCK_SCREEN_CODE = 201;
