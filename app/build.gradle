@@ -12,11 +12,11 @@ android {
         versionName "1.0"
     }
     signingConfigs {
-        myConfig{
-            storeFile file("gradle.keystore")
-            storePassword "fyales"
-            keyAlias "fyales"
-            keyPassword "fyales"
+        lockScreenConfig {
+            keyAlias 'fyales'
+            keyPassword 'dream#wei'
+            storeFile file('/Users/wei/code/fyales.jks')
+            storePassword 'dream#wei'
         }
     }
 
@@ -24,6 +24,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.lockScreenConfig
         }
     }
 
@@ -31,6 +32,8 @@ android {
         full {
             applicationId "com.fyales.lockscreen"
             versionName "1.0"
+        }
+        lockScreenConfig {
         }
     }
 }
